@@ -13,11 +13,11 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "outputPath": "dist/athulks_portfolio",
+            "index": "src/index.html",
             "tsConfig": "tsconfig.app.json",
+            "aot": true,
+            "browser": "src/main.ts",
             "assets": [
               {
                 "glob": "**/*",
@@ -85,6 +85,9 @@
               "src/styles.css"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
