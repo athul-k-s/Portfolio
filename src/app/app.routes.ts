@@ -9,12 +9,12 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                pathMatch: 'full',
-                component: Index
+                redirectTo:'/index',
+                pathMatch:'full'
             },
             {
                 path: 'index',
-                component: Index
+                loadComponent: ()=> import('./Components/index').then((c)=>c.Index)
             }
         ]
     }
